@@ -611,7 +611,7 @@ p {
 .form-container input[type=checkbox]:checked ~ i {
     display: block;
     position: absolute;
-    top: -16px;
+    top: 0;
     left: 0;
     width: 20px;
     height: 20px;
