@@ -535,10 +535,10 @@ p {
   border: 1px solid #0D215C;
   border-radius: 2px;
 }
-.form-container input[type=checkbox]:checked ~ pre {
+.form-container input[type=checkbox]:checked ~ i {
   display: block;
   position: absolute;
-  top: -16px;
+  top: 0;
   left: 0;
   width: 20px;
   height: 20px;
@@ -546,7 +546,7 @@ p {
   background-color: #00a76a;
   background: url("/assets/checked2.svg") center center no-repeat;
 }
-.form-container pre {
+.form-container i {
   display: none;
 }
 

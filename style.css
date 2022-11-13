@@ -608,7 +608,7 @@ p {
     border-radius: 2px;
 }
 
-.form-container input[type=checkbox]:checked ~ pre {
+.form-container input[type=checkbox]:checked ~ i {
     display: block;
     position: absolute;
     top: -16px;
@@ -620,7 +620,7 @@ p {
     background: url("/assets/checked2.svg") center center no-repeat;
 }
 
-.form-container pre {
+.form-container i {
     display: none;
 }
 
@@ -1204,6 +1204,8 @@ nav ul li a:hover {
     background: rgba(244, 244, 244, 0.6);
     opacity: 0;
     transition: 300ms ease;
+    border: none;
+    box-shadow: none;
 }
 
 .video .container__video .video-custom-button span {

@@ -60,10 +60,10 @@
     border: 1px solid #0D215C;
     border-radius: 2px;
 
-    &:checked ~ pre {
+    &:checked ~ i {
       display: block;
       position: absolute;
-      top: -16px;
+      top: 0;
       left: 0;
       width: 20px;
       height: 20px;
@@ -73,7 +73,7 @@
     }
   }
 
-  pre {
+  i {
     display: none;
   }
 }
