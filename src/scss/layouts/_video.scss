@@ -1,0 +1,29 @@
+.video {
+  .container__title {
+    padding-top: 110px;
+
+    h2 {
+      width: 520px;
+      text-align: center;
+    }
+  }
+
+  video {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .container__video {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video .container__title {
+    padding-top: 50px;
+
+    h2 {
+      width: auto;
+    }
+  }
+}

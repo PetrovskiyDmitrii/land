@@ -1,0 +1,18 @@
+h2 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  color: #0D215C;
+}
+
+p {
+  color: #0D215C;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}

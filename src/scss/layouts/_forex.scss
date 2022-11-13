@@ -1,0 +1,142 @@
+.forex {
+
+  .container__forex {
+    align-items: center;
+
+    .img-hidden {
+      display: none;
+    }
+  }
+
+  .container__numbers {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 45px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    padding: 49px 75px;
+    margin-top: -85px;
+
+    .number {
+      font-weight: 600;
+      font-size: 45px;
+      line-height: 53px;
+      color: #1E4DD8;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #0D215C;
+    }
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 45px;
+  }
+
+  .icons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 34px 0;
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: 0 34px;
+
+    p {
+      margin: 0 0 5px 0;
+      color:  rgba(13, 33, 92, 0.8);
+    }
+
+    .item-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .item-subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .forex {
+    .container__forex {
+      align-items: unset;
+      margin-top: 100px;
+      padding-bottom: 170px;
+
+      h2 {
+        font-size: 28px;
+        line-height: 33px;
+      }
+
+      .subtitle {
+        margin-bottom: 20px;
+      }
+    }
+
+    .icons-list {
+      gap: 30px 0;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .forex {
+    .container__numbers {
+      padding: 20px 30px;
+      gap: 0 20px;
+      margin-top: -20px;
+
+      .number {
+        font-size: 28px;
+        line-height: 33px;
+      }
+
+      .text {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .forex {
+    .container__forex {
+      padding-bottom: 50px;
+      
+      .img-hidden {
+        display: block;
+        margin-left: 15px;
+        width: 100%;
+      }
+    }
+    .container__numbers {
+      flex-wrap: wrap;
+      justify-content: unset;
+
+      > div {
+        width: calc(100% / 2 - 10px);
+        margin-bottom: 15px;
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}

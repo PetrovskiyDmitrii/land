@@ -1,0 +1,85 @@
+.thanks-you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('/assets/thanks-bcg.png') top center;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 30px 130px;
+    width: 760px;
+    height: 407px;
+    text-align: center;
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .title {
+      padding: 0 50px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 168px;
+      height: 48px;
+      margin-top: 55px;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .thanks-you {
+
+    &__container {
+      padding: 30px;
+
+      .btn {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .thanks-you {
+
+    &__container {
+      .title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .thanks-you {
+
+    &__container {
+      .title {
+        font-size: 23px;
+        line-height: 32px;
+      }
+    }
+  }
+}
