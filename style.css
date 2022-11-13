@@ -486,7 +486,7 @@ p {
     display: -ms-flexbox;
     display: flex;
     max-width: 1210px;
-    padding: 0 20px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -499,6 +499,7 @@ p {
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center;
+    text-align: center;
     padding: 56px 20px 46px 20px;
 }
 
@@ -939,10 +940,15 @@ nav ul li a:hover {
 .forex .container__forex {
     -ms-flex-align: center;
     align-items: center;
+    margin: 110px auto;
 }
 
 .forex .container__forex .img-hidden {
     display: none;
+}
+
+.forex .container__forex .right {
+    text-align: center;
 }
 
 .forex .container__numbers {
@@ -1018,8 +1024,6 @@ nav ul li a:hover {
     .forex .container__forex {
         -ms-flex-align: unset;
         align-items: unset;
-        margin-top: 100px;
-        padding-bottom: 170px;
     }
 
     .forex .container__forex h2 {
@@ -1054,14 +1058,24 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .forex .container__forex {
+        margin-top: 110px;
+        margin-bottom: 170px;
+    }
+
+    .forex .container__forex .img-hidden {
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 578px) {
     .forex .container__forex {
-        padding-bottom: 50px;
+        margin: 100px auto 44px auto;
     }
 
     .forex .container__forex .img-hidden {
         display: block;
-        margin-left: 15px;
         width: 100%;
     }
 
@@ -1123,12 +1137,32 @@ nav ul li a:hover {
         padding-bottom: 50px;
     }
 
+    .container__trading h3 {
+        text-align: center;
+    }
+
     .container__trading .left, .container__trading .right {
         width: 100%;
     }
 
     .container__trading .right {
         text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .trading {
+        background: #fff;
+    }
+
+    .container__trading h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container__trading h3 {
+        font-size: 20px;
     }
 }
 
@@ -1186,11 +1220,21 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .video .container__title {
-        padding-top: 50px;
+        padding-top: 44px;
     }
 
     .video .container__title h2 {
         width: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .video .container__title {
+        padding-bottom: 35px;
+    }
+
+    .video .container__title h2 {
+        margin: 0;
     }
 }
 
@@ -1286,6 +1330,10 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+.form-block .phone.mob {
+    display: none;
+}
+
 .form-block .right .images {
     display: -ms-flexbox;
     display: flex;
@@ -1333,6 +1381,16 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .form-block .right .rated {
         margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-block .container__form-block .phone {
+        display: none;
+    }
+
+    .form-block .phone.mob {
+        display: block;
     }
 }
 
