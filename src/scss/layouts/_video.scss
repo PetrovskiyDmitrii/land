@@ -11,10 +11,43 @@
   video {
     margin: 0 auto;
     width: 100%;
+    border-radius: 24px;
   }
 
   .container__video {
     padding-bottom: 60px;
+    position: relative;
+
+    &:hover .video-custom-button {
+      opacity: 1;
+    }
+
+    .video-custom-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 131px;
+      height: 131px;
+      text-align: center;
+      border-radius: 50%;
+      background: rgba(244, 244, 244, 0.6);
+      opacity: 0;
+      transition: 300ms ease;
+
+      span {
+        position: absolute;
+        top: 37px;
+        left: 37px;
+        display: inline-block;
+        z-index: 3;
+        width: 64px;
+        height: 53px;
+        background: url('/assets/play.svg') center center no-repeat;
+        background-size: contain;
+
+      }
+    }
   }
 }
 

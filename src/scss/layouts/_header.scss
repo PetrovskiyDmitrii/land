@@ -64,6 +64,15 @@
     color: #fff;
     padding-right: 15px;
     margin: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    option {
+      color: #000;
+      background: #fff;
+    }
   }
 }
 
@@ -100,4 +109,9 @@
       }
     }
   }
+}
+
+
+nav ul li a:hover {
+  opacity: 0.7;
 }

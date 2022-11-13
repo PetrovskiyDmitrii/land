@@ -9,6 +9,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
+    color: #0D215C;
   }
 
   p {
@@ -19,14 +20,14 @@
 
   .btn--primary {
     margin-top: 15px;
-    padding: 15px 45px;
   }
 
   .left {
-    width: 40%;
+    max-width: 400px;
   }
   .right {
-    width: 60%;
+    width: calc(100% - 400px);
+    text-align: center;
   }
 }
 

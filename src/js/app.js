@@ -9,3 +9,16 @@ const openMenu = () => {
 
 burger.addEventListener('click', openMenu)
 burgerMenu.addEventListener('click', openMenu)
+
+const playButton = document.querySelector('.video-custom-button');
+const video = document.getElementById('video');
+
+playButton.addEventListener('click', () => {
+  if (video.paused == true) {
+    video.play();
+    // playButton.innerHTML = "Pause";
+  } else {
+    video.pause();
+    // playButton.innerHTML = "Play";
+  }
+});

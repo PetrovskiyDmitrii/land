@@ -22,10 +22,17 @@
   }
 }
 
+@media (max-width: 578px) {
+  .container__footer {
+    align-items: unset;
+  }
+}
+
 @media (max-width: 445px) {
   .container__footer{
     .logo {
       margin-bottom: 20px;
+      width: 92px;
     }
     nav ul {
       flex-wrap: wrap;
