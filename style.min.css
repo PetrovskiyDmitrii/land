@@ -921,6 +921,7 @@ nav ul li a:hover {
   font-size: 24px;
   line-height: 28px;
   color: #0D215C;
+  margin-bottom: 12px;
 }
 .container__trading p {
   font-weight: 400;
@@ -965,13 +966,14 @@ nav ul li a:hover {
 .video .container__video {
   padding-bottom: 60px;
   position: relative;
+  max-width: 848px;
 }
 .video .container__video:hover .video-custom-button {
   opacity: 1;
 }
 .video .container__video .video-custom-button {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 30px);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 131px;
@@ -1166,7 +1168,7 @@ nav ul li a:hover {
   background-size: cover;
   border-radius: 16px;
   padding: 30px 130px;
-  width: 760px;
+  max-width: 717px;
   height: 407px;
   text-align: center;
 }
@@ -1174,7 +1176,7 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 .thanks-you__container .title {
-  padding: 0 50px;
+  padding: 0 30px;
   font-weight: 600;
   font-size: 32px;
   line-height: 38px;
@@ -1201,13 +1203,14 @@ nav ul li a:hover {
     padding: 30px;
   }
   .thanks-you__container .btn {
-    margin-top: auto;
+    margin-top: 56px;
   }
 }
 @media (max-width: 425px) {
   .thanks-you__container .title {
     font-size: 28px;
     line-height: 32px;
+    padding: 0;
   }
 }
 @media (max-width: 375px) {

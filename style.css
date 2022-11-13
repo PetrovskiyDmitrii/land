@@ -453,7 +453,7 @@ p {
 
 .btn {
     display: inline-block;
-    padding: 8px 30px;
+    padding: 8px 16px;
     background: #FFFFFF;
     border-radius: 10px;
     border: none;
@@ -461,16 +461,25 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+    box-shadow: none;
+    min-width: 123px;
+    min-height: 39px;
 }
 
 .btn--primary {
     background: #00A76A;
-    padding: 15px 30px;
     color: #fff;
     border-radius: 5px;
     font-weight: 500;
     font-size: 14px;
     line-height: 22px;
+    min-width: 168px;
+    min-height: 48px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .container {
@@ -490,7 +499,18 @@ p {
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 56px 20px 46px 20px;
+}
+
+.container__title h2 {
+    margin-bottom: 12px;
+}
+
+.container__title .subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(13, 33, 92, 0.8);
 }
 
 .container__center {
@@ -521,10 +541,16 @@ p {
     padding: 30px 30px 50px 30px;
     border-radius: 24px;
     width: 464px;
+    position: relative;
+    z-index: 2;
 }
 
 .form-container h3 {
     margin: 0;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #0D215C;
 }
 
 .form-container form {
@@ -546,6 +572,7 @@ p {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    color: #0D215C;
 }
 
 .form-container div {
@@ -557,19 +584,43 @@ p {
 
 .form-container input:not([type=checkbox]) {
     border: 1px solid rgba(13, 33, 92, 0.2);
+    padding: 0 16px;
     border-radius: 5px;
     height: 52px;
     margin-top: 8px;
+    box-shadow: none;
+}
+
+.form-container .form-checkbox {
+    position: relative;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
 .form-container input[type=checkbox] {
     width: 20px;
     height: 20px;
     margin-right: 15px;
-    background: #000;
+    background: #0D215C;
     opacity: 0.1;
     border: 1px solid #0D215C;
     border-radius: 2px;
+}
+
+.form-container input[type=checkbox]:checked ~ pre {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-color: #00a76a;
+    background-color: #00a76a;
+    background: url("/assets/checked2.svg") center center no-repeat;
+}
+
+.form-container pre {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -729,6 +780,15 @@ p {
     margin: 0;
 }
 
+.select-wrapper select:hover {
+    cursor: pointer;
+}
+
+.select-wrapper select option {
+    color: #000;
+    background: #fff;
+}
+
 @media (max-width: 1024px) {
     .container.container__header div, .container.container__header nav {
         display: none;
@@ -762,6 +822,10 @@ p {
     .container.container__header .burger.active span:nth-child(3) {
         opacity: 0;
     }
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
 }
 
 .regulated {
@@ -826,6 +890,7 @@ p {
     position: absolute;
     top: 35px;
     right: -97px;
+    z-index: 1;
 }
 
 .container__regulated .form-container {
@@ -913,6 +978,7 @@ p {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 45px;
+    max-width: 460px;
 }
 
 .forex .icons-list {
@@ -973,7 +1039,7 @@ p {
 @media (max-width: 1023px) {
     .forex .container__numbers {
         padding: 20px 30px;
-        gap: 0 20px;
+        gap: 20px 20px;
         margin-top: -20px;
     }
 
@@ -1008,7 +1074,6 @@ p {
 
     .forex .container__numbers > div {
         width: calc(50% - 10px);
-        margin-bottom: 15px;
     }
 
     .forex .right {
@@ -1028,6 +1093,7 @@ p {
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
+    color: #0D215C;
 }
 
 .container__trading p {
@@ -1038,15 +1104,15 @@ p {
 
 .container__trading .btn--primary {
     margin-top: 15px;
-    padding: 15px 45px;
 }
 
 .container__trading .left {
-    width: 40%;
+    max-width: 400px;
 }
 
 .container__trading .right {
-    width: 60%;
+    width: calc(100% - 400px);
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -1077,10 +1143,44 @@ p {
 .video video {
     margin: 0 auto;
     width: 100%;
+    border-radius: 24px;
 }
 
 .video .container__video {
     padding-bottom: 60px;
+    position: relative;
+    max-width: 848px;
+}
+
+.video .container__video:hover .video-custom-button {
+    opacity: 1;
+}
+
+.video .container__video .video-custom-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 131px;
+    height: 131px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(244, 244, 244, 0.6);
+    opacity: 0;
+    transition: 300ms ease;
+}
+
+.video .container__video .video-custom-button span {
+    position: absolute;
+    top: 37px;
+    left: 37px;
+    display: inline-block;
+    z-index: 3;
+    width: 64px;
+    height: 53px;
+    background: url("/assets/play.svg") center center no-repeat;
+    background-size: contain;
 }
 
 @media (max-width: 768px) {
@@ -1262,9 +1362,17 @@ p {
     color: #434343;
 }
 
+@media (max-width: 578px) {
+    .container__footer {
+        -ms-flex-align: unset;
+        align-items: unset;
+    }
+}
+
 @media (max-width: 445px) {
     .container__footer .logo {
         margin-bottom: 20px;
+        width: 92px;
     }
 
     .container__footer nav ul {
