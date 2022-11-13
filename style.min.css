@@ -441,7 +441,7 @@ p {
 .container {
   display: flex;
   max-width: 1210px;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 .container .left, .container .right {
@@ -451,6 +451,7 @@ p {
 .container__title {
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 56px 20px 46px 20px;
 }
 .container__title h2 {
@@ -798,9 +799,13 @@ nav ul li a:hover {
 }
 .forex .container__forex {
   align-items: center;
+  margin: 110px auto;
 }
 .forex .container__forex .img-hidden {
   display: none;
+}
+.forex .container__forex .right {
+  text-align: center;
 }
 .forex .container__numbers {
   display: flex;
@@ -860,8 +865,6 @@ nav ul li a:hover {
 @media (max-width: 1210px) {
   .forex .container__forex {
     align-items: unset;
-    margin-top: 100px;
-    padding-bottom: 170px;
   }
   .forex .container__forex h2 {
     font-size: 28px;
@@ -889,13 +892,21 @@ nav ul li a:hover {
     line-height: 17px;
   }
 }
+@media (max-width: 768px) {
+  .forex .container__forex {
+    margin-top: 110px;
+    margin-bottom: 170px;
+  }
+  .forex .container__forex .img-hidden {
+    margin-bottom: 25px;
+  }
+}
 @media (max-width: 578px) {
   .forex .container__forex {
-    padding-bottom: 50px;
+    margin: 100px auto 44px auto;
   }
   .forex .container__forex .img-hidden {
     display: block;
-    margin-left: 15px;
     width: 100%;
   }
   .forex .container__numbers {
@@ -944,11 +955,27 @@ nav ul li a:hover {
     flex-direction: column-reverse;
     padding-bottom: 50px;
   }
+  .container__trading h3 {
+    text-align: center;
+  }
   .container__trading .left, .container__trading .right {
     width: 100%;
   }
   .container__trading .right {
     text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .trading {
+    background: #fff;
+  }
+  .container__trading h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 320px) {
+  .container__trading h3 {
+    font-size: 20px;
   }
 }
 .video .container__title {
@@ -998,10 +1025,18 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
   .video .container__title {
-    padding-top: 50px;
+    padding-top: 44px;
   }
   .video .container__title h2 {
     width: auto;
+  }
+}
+@media (max-width: 425px) {
+  .video .container__title {
+    padding-bottom: 35px;
+  }
+  .video .container__title h2 {
+    margin: 0;
   }
 }
 .steps .container__center {
@@ -1078,6 +1113,9 @@ nav ul li a:hover {
   bottom: 0;
   z-index: 1;
 }
+.form-block .phone.mob {
+  display: none;
+}
 .form-block .right .images {
   display: flex;
   flex-direction: column;
@@ -1115,6 +1153,14 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .form-block .right .rated {
     margin: 20px 0 0 0;
+  }
+}
+@media (max-width: 375px) {
+  .form-block .container__form-block .phone {
+    display: none;
+  }
+  .form-block .phone.mob {
+    display: block;
   }
 }
 .container__footer {

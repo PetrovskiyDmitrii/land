@@ -37,12 +37,36 @@
     flex-direction: column-reverse;
     padding-bottom: 50px;
 
+    h3 {
+      text-align: center;
+    }
+
     .left, .right {
       width: 100%;
     }
 
     .right {
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .trading {
+    background: #fff;
+  }
+
+  .container__trading {
+    h3 {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .container__trading {
+    h3 {
+      font-size: 20px;
     }
   }
 }

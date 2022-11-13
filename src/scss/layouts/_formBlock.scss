@@ -16,6 +16,10 @@
     }
   }
 
+  .phone.mob {
+    display: none;
+  }
+
   .right {
     .images {
       display: flex;
@@ -69,6 +73,20 @@
       .rated {
         margin: 20px 0 0 0;
       }
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .form-block {
+    .container__form-block {
+      .phone {
+        display: none;
+      }
+    }
+
+    .phone.mob {
+      display: block;
     }
   }
 }
