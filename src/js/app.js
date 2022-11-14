@@ -1,3 +1,5 @@
+import intlTelInput from 'intl-tel-input';
+
 const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger-menu__header img');
 const mMenu = document.querySelector('.burger-menu');
@@ -16,9 +18,21 @@ const video = document.getElementById('video');
 playButton.addEventListener('click', () => {
   if (video.paused == true) {
     video.play();
-    // playButton.innerHTML = "Pause";
   } else {
     video.pause();
-    // playButton.innerHTML = "Play";
   }
+});
+
+
+// const input = document.querySelector("#phone");
+// intlTelInput(input, {
+//     // any initialisation options go here
+//     utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
+// });
+
+const input = document.querySelectorAll("#phone");
+input.forEach(item => {
+  intlTelInput(item, {
+      utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
+    });
 });

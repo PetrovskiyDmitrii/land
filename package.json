@@ -33,6 +33,7 @@
         "IE 10"
     ],
     "dependencies": {
-        "imask": "^6.4.3"
+        "imask": "^6.4.3",
+        "intl-tel-input": "^17.0.19"
     }
 }

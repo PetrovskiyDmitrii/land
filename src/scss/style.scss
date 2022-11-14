@@ -3,10 +3,19 @@
 @import 'components/components';
 @import 'layouts/layouts';
 
+@import '/node_modules/intl-tel-input/build/css/intlTelInput.min.css';
+
 html {
     overflow-x: hidden;
 }
 
 body {
     font-family: 'Rubik';
+}
+
+
+.iti__flag {background-image: url("/assets/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("/assets/flags@2.png");}
 }
